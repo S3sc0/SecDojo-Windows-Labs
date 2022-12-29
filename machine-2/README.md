@@ -1,13 +1,16 @@
 ---
 title: "SecDojo - Westeros Lab"
-author: [Ayoub Amzouar]
+author: [Sesco]
+subtitle: "Shared machine write up"
 date: "2022-12-29"
 keywords: [Windows, Security, CTF, Hacking]
-titepage: true
+lang: "en"
+titlepage: true
 titlepage-text-color: "FFFFFF"
-titlepage-color: "0c0d0e"
+titlepage-color: "243763"
 titlepage-rule-color: "8ac53e"
 ...
+
 
 # Information
 
@@ -74,11 +77,11 @@ zsh: segmentation fault  nmap -sV -sC -Pn 172.16.4.29
 
 From the above output we can see that ports, **135**, **445** and **3389** are the open ports also we found that the running system is **Windows Server 2016 Datacenter 6.3**.
 
-To get more informations about the machine I used a script in nmap that discovers smb shares available.
+To get more informations about the machine I used a script in nmap that discovers available smb shares.
 
 
 ```console
-$ nmap -Pn -p 445 --script smb-enum-shares 172.16.4.29                                                                139 â¨¯
+$ nmap -Pn -p 445 --script smb-enum-shares 172.16.4.29
 Starting Nmap 7.92 ( https://nmap.org ) at 2022-12-28 15:23 UTC
 Nmap scan report for 172.16.4.29
 Host is up (0.00030s latency).
@@ -122,7 +125,7 @@ There is four shares available, two of them can be accessed anonymously let's tr
 ![](./Figure%202.png)
 **Figure 2:** Determining file type
 
-Those are Windows registry keys which generally are windows configurations, I've noticed the existence of **sam.save** sam is Security Account Manager which normally stores local secrets and other two files can help us get LSA secrets all we have to do is parsed them together.
+Those are Windows registry keys which generally are windows configurations, I've noticed the existence of **sam.save** sam is Security Account Manager which normally stores local secrets and other two files can help us get LSA secrets all we have to do is parse them together.
 
 
 ![](Figure%203.png)

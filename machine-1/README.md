@@ -1,13 +1,22 @@
 ---
 title: "SecDojo - Westeros Lab"
-author: [Ayoub Amzouar]
+author: [Sesco]
+subtitle: "Dumped machine write up"
 date: "2022-12-29"
 keywords: [Windows, Security, CTF, Hacking]
-titepage: true
+lang: "en"
+titlepage: true
 titlepage-text-color: "FFFFFF"
-titlepage-color: "0c0d0e"
+titlepage-color: "243763"
 titlepage-rule-color: "8ac53e"
 ...
+
+# Information
+
+- **Name:** Westeros Lab - Dumped Machine
+- **Profile:** SecDojo
+- **Difficulty:** Easy
+- **Description:** Westeros is a network of vulnerable Windows servers. Each box suffers from a severe vulnerability that if properly exploited, will grant you administrator access and get you the root flag located at the Administrator desktop folder.
 
 # Enumeration
 
@@ -70,7 +79,10 @@ Nmap done: 1 IP address (1 host up) scanned in 20.12 seconds
 ```
 From the above output we can see that ports, **80**, **135**, **139**, **445** and **3389** are the open ports also we found that the running system is **Windows Server 2016 Datacenter 6.3**.
 
+## Port 80
+
 After checking what's on port 80 this is what we found.
+
 ![](./Figure%2001.png)
 **Figure 1:** *172.16.4.202:80/*
 
@@ -87,7 +99,7 @@ This is very interesting the **.DMP** file or dump file format is used by Window
 After beating my head up trying to find a way or a tool to extract the informations from **.DMP** files, I finally found a tool named **pypykatz.py** which is Mimikatz implementation in python, and it only works with **lsass.DMP** which is decent because the **lsass.exe** process is the one responsible for verifing users logging on to a Windows computer or server, handles password changes, and creates access tokens. it means we can find passwords in its dump file.
 
 ```console
-pypykatz lsa minidump ./lsass.DMP 
+$ pypykatz lsa minidump ./lsass.DMP 
 INFO:root:Parsing file ./lsass.DMP
 FILE: ======== ./lsass.DMP =======
 == LogonSession ==
@@ -135,11 +147,13 @@ luid 161412
 ....
 ```
 
-Even though we didn't find a text-format passwords, there was a part of NTLM hash **`NT: 78f9261c7b0f08bd9a3b3b13340e4c2a`** which we could use in our Pass-The-Hash attack using **psexec.py** tool.
+Even though we didn't find a text-format passwords, there was a part of NTLM hash **`NT:78f9261c7b0f08bd9a3b3b13340e4c2a`** which we could use in our Pass-The-Hash attack using **psexec.py** tool.
 
 
 ![](./Figure%2004.png)
 **Figure 4:** *Inside the windows machine*
 
-## Flag
-After navigating to the Administator's desktop I found our flag: **`Dumped_Sesco-xaaxzdlfy4zjwjs5ln0nfvmtwqqhlwy4`**
+## Root Flag
+After navigating to the Administator's desktop I found our flag.
+
+**`Dumped_Sesco-xaaxzdlfy4zjwjs5ln0nfvmtwqqhlwy4`**
