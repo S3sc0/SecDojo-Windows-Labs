@@ -116,6 +116,8 @@ Host script results:
 Nmap done: 1 IP address (1 host up) scanned in 23.50 seconds
 ```
 
+# Exploitation
+
 There is four shares available, two of them can be accessed anonymously let's try.
 
 
