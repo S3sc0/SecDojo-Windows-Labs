@@ -169,7 +169,7 @@ Password change was required and so I did.
 
 ![](Figure%202.png)
 
-## Flag
+## Root Flag
 
 Navigating to the Administrator Desktop and there was our flag.
 
