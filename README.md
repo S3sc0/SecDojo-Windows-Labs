@@ -9,3 +9,8 @@
 ## Lab-02 Machine
 
 1. [Machine 1 write-up](https://github.com/Ayoub-Amzouar/SecDojo-Windows-Labs/blob/main/Lab-02/README.md)
+
+## Lab-03 Machine
+
+1. [Machine 1 write-up](https://github.com/Ayoub-Amzouar/SecDojo-Windows-Labs/blob/main/Lab-03/machine-1/README.md)
+2. [Machine 2 write-up](https://github.com/Ayoub-Amzouar/SecDojo-Windows-Labs/blob/main/Lab-03/machine-2/README.md)

