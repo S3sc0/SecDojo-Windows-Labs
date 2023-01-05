@@ -154,7 +154,7 @@ The SMB Relay Attack requires us to set [UNC](https://learn.microsoft.com/en-us/
 But before using the module we have to put our modified SCF file into the share and to do that we'll have to mount the share to one of our local folders, we can do that with this command.
 
 ```console
-$ sudo mount.cifs //Attacker_IP_Adress/compta ./LocalFolder -o user=Anonymous,uid=$UID
+$ sudo mount.cifs //Remote_Machine_IP_Address/compta ./LocalFolder -o user=Anonymous,uid=$UID
 ```
 
 ```console
