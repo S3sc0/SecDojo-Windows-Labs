@@ -14,6 +14,3 @@
 
 1. [Machine 1 write-up](https://github.com/Ayoub-Amzouar/SecDojo-Windows-Labs/blob/main/Lab-03/machine-1/README.md)
 2. [Machine 2 write-up](https://github.com/Ayoub-Amzouar/SecDojo-Windows-Labs/blob/main/Lab-03/machine-2/README.md)
-
-## Lab-04 Machine
-1. [Machine 1 write-up](https://github.com/Ayoub-Amzouar/SecDojo-Windows-Labs/blob/main/Lab-04/README.md)
