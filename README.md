@@ -1,7 +1,7 @@
 # SecDojo Lab Write-ups
 
 
-## Windows
+## 🪟 Windows
 ### Lab-01
 1. [Machine 1 write-up](https://github.com/Ayoub-Amzouar/SecDojo-Windows-Lab-01/blob/main/Lab-01/machine-1/README.md)
 2. [Machine 2 write-up](https://github.com/Ayoub-Amzouar/SecDojo-Windows-Lab-01/blob/main/Lab-01/machine-2/README.md)
@@ -18,6 +18,6 @@
 2. [Machine 2 write-up](https://github.com/Ayoub-Amzouar/SecDojo-Windows-Labs/blob/main/Lab-03/machine-2/README.md)
 
 
-## Network
+## 🖧 Network
 ### Lab-04
 1. [Machine 1 write-up](https://github.com/Ayoub-Amzouar/SecDojo-Windows-Labs/blob/main/Lab-04/README.md)
