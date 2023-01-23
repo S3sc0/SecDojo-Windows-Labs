@@ -20,4 +20,8 @@
 
 ## 🖧 Network
 ### Lab-04
+
 1. [Machine 1 write-up](https://github.com/Ayoub-Amzouar/SecDojo-Windows-Labs/blob/main/Lab-04/README.md)
+
+### Lab-05
+1. [Machine 1 write-up](https://github.com/Ayoub-Amzouar/SecDojo-Windows-Labs/blob/main/Lab-05/README.md)
